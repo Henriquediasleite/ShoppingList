@@ -3,9 +3,9 @@ const botaoAdicionar = document.getElementById('adicionar-item')
 const listaDeCompras = document.getElementById('lista-de-compras')
 let contador = 0
 
-botaoAdicionar.addEventListener('click',(evento) => {
+botaoAdicionar.addEventListener('click', (evento) => {
     evento.preventDefault()
-    if(inputItem.value === ''){
+    if (inputItem.value === '') {
         alert('Por favor, insira um item')
         return
     }
@@ -23,5 +23,17 @@ botaoAdicionar.addEventListener('click',(evento) => {
     containerItemDaLista.appendChild(nomeItem)
 
     itemDaLista.appendChild(containerItemDaLista)
+
+    const diaDaSemana = new Date().toLocaleDateString('pt-BR', { weekday: 'long' })
+    const data = new Date().toLocaleDateString('pt-BR')
+    const hora = new Date().toLocaleTimeString('pt-BR', { hour: 'numeric', minute: 'numeric' })
+
+    const dataCompleta = `${diaDaSemana} (${data}) às ${hora}`
+    const itemData = document.createElement('p')
+    itemData.innerText = dataCompleta // Corrigido para atribuir ao itemData
+    itemData.classList.add('texto-data')
+
+    itemDaLista.appendChild(itemData) // Corrigido para anexar itemData ao itemDaLista
+
     listaDeCompras.appendChild(itemDaLista)
 })
