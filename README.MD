@@ -4,8 +4,11 @@ O projeto "Shopping List" é uma aplicação interativa que permite aos usuário
 
 # Tecnologias Utilizadas
 **HTML**: Para estruturar a interface da aplicação.
+
 **CSS**: Para estilizar a aplicação e torná-la visualmente atraente.
+
 **JavaScript**: Para implementar a lógica da aplicação, incluindo a manipulação de DOM e a interação com o usuário.
+
 **Visual Studio Code**: Ambiente de desenvolvimento utilizado para codificação.
 
 # Instalação
